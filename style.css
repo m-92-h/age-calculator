@@ -1,0 +1,132 @@
+:root {
+    --clr-primary-purple: hsl(259, 100%, 65%);
+    --clr-primary-red: hsl(0, 100%, 67%);
+    --clr-neutral-white: hsl(0, 100%, 100%);
+    --clr-neutral-grey-100: hsl(0, 0%, 94%);
+    --clr-neutral-grey-200: hsl(0, 0%, 86%);
+    --clr-neutral-grey-500: hsl(0, 1%, 44%);
+    --clr-neutral-black: hsl(0, 0%, 0%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--clr-neutral-grey-100);
+}
+
+/* Age Calculator Card Container */
+.age-calculator-card {
+    max-width: 50rem;
+    border-bottom-right-radius: 9rem !important;
+}
+
+/* Input Styles */
+.form-label {
+    color: var(--clr-neutral-grey-500);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+}
+
+.form-control {
+    height: 4.5rem;
+    font-size: 2rem !important;
+    border: 1px solid var(--clr-neutral-grey-200);
+    color: var(--clr-neutral-black);
+    padding: 0.5rem 1rem;
+}
+
+/* Custom placeholder color for better visibility */
+.form-control::placeholder {
+    color: var(--clr-neutral-grey-500);
+}
+
+/* Focus States */
+.form-control:focus {
+    border-color: var(--clr-primary-purple);
+    box-shadow: 0 0 0 0.25rem rgba(144, 19, 254, 0.25);
+}
+
+/* Error State */
+.is-invalid {
+    border-color: var(--clr-primary-red) !important;
+}
+
+.invalid-feedback {
+    color: var(--clr-primary-red);
+    font-style: italic;
+    font-size: 0.7rem;
+    display: block; /* Make sure it's always block to take up space when visible */
+}
+
+/* Submit Button Wrapper and Positioning */
+.submit-button-wrapper {
+    /* For mobile/tablet */
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -32px; /* Half the button height to center it over the line */
+}
+
+@media (min-width: 768px) {
+    .submit-button-wrapper {
+        justify-content: flex-end; /* Align right on desktop */
+        right: -0.8rem;
+    }
+}
+
+/* Submit Button Style */
+.btn-purple-circle {
+    background-color: var(--clr-primary-purple);
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-purple-circle:hover,
+.btn-purple-circle:focus {
+    background-color: var(--clr-neutral-black); /* Darker on hover/focus */
+}
+
+/* Results Display */
+.results-display h1 {
+    font-size: 3rem; /* Mobile size */
+    line-height: 1.3;
+    margin-bottom: -0.5rem;
+    letter-spacing: -0.05em;
+}
+
+.results-display .text-purple {
+    color: var(--clr-primary-purple) !important;
+    margin-right: 0.25rem;
+}
+
+@media (min-width: 768px) {
+    .results-display h1 {
+        font-size: 5rem;
+        margin-bottom: -1rem;
+    }
+}
+
+@media (max-width: 375px){
+    .age-calculator-card {
+    border-bottom-right-radius: 4.5rem !important; 
+    }
+
+    /* Input Styles */
+    .form-label {
+        font-size: 0.60rem;
+    }
+    
+    .form-control {
+        height: 2.5rem;
+        font-size: 1rem !important;
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+/* Accessibility and Design */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
