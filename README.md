@@ -1,4 +1,4 @@
-# Frontend Mentor - Age Calculator App
+# Age Calculator App
 
 A clean and responsive age calculator that computes the exact number of years, months, and days from a given birth date to today — built as a [Frontend Mentor](https://www.frontendmentor.io) challenge.
 
