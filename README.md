@@ -49,7 +49,7 @@ Make sure you have **Node.js** installed on your machine.
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/age-calculator.git
+git clone https://github.com/m-92-h/age-calculator.git
 
 # 2. Navigate to the project folder
 cd age-calculator
