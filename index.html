@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="icon" type="image/png" sizes="32x32" href="./public/favicon-32x32.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet" />
+
+        <title>Age calculator</title>
+    </head>
+    <body class="d-flex flex-column justify-content-center align-items-center vh-100 p-3">
+        <main class="container">
+            <div class="age-calculator-card bg-white p-4 p-md-5 rounded-4 shadow-lg mx-auto">
+                <form id="age-form" class="row border-bottom pb-5 pb-md-4 mb-4 position-relative">
+                    <div class="col-4 col-md-3">
+                        <label for="day-input" class="form-label text-uppercase fw-bold">Day</label>
+                        <input type="number" class="form-control fw-bold" id="day-input" placeholder="DD" min="1" max="31" />
+                        <div class="invalid-feedback" id="day-error"></div>
+                    </div>
+
+                    <div class="col-4 col-md-3">
+                        <label for="month-input" class="form-label text-uppercase fw-bold">Month</label>
+                        <input type="number" class="form-control fw-bold" id="month-input" placeholder="MM" min="1" max="12" />
+                        <div class="invalid-feedback" id="month-error"></div>
+                    </div>
+
+                    <div class="col-4 col-md-3">
+                        <label for="year-input" class="form-label text-uppercase fw-bold">Year</label>
+                        <input type="number" class="form-control fw-bold" id="year-input" placeholder="YYYY" min="1970" max="2025" />
+                        <div class="invalid-feedback" id="year-error"></div>
+                    </div>
+
+                    <div class="col-12 submit-button-wrapper">
+                        <button type="submit" class="btn btn-purple-circle rounded-circle p-2 p-md-4 shadow">
+                            <img src="./public/icon-arrow.svg" width="40" height="40" alt="" />
+                        </button>
+                    </div>
+                </form>
+
+                <div class="results-display pt-4 pt-md-0">
+                    <h1 class="display-1 fw-bolder fst-italic"><span id="result-years" class="text-purple">--</span> years</h1>
+                    <h1 class="display-1 fw-bolder fst-italic"><span id="result-months" class="text-purple">--</span> months</h1>
+                    <h1 class="display-1 fw-bolder fst-italic"><span id="result-days" class="text-purple">--</span> days</h1>
+                </div>
+            </div>
+        </main>
+
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
